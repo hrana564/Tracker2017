@@ -1,0 +1,12 @@
+{
+  "name": "2017 Tracker",
+  "description": "Tracking of activites for 2017.",
+  "keywords": [
+    "productivity",
+    "HTML5",
+    "scalpel"
+  ],
+  "repository": "https://github.com/hrana564/Tracker2017",
+  "logo": "https://small-sharp-tool.com/logo.svg",
+  "success_url": "/"
+}
