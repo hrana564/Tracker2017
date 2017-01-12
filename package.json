@@ -3,9 +3,12 @@
   "version": "0.0.0",
   "description": "Tracker2017",
   "main": "app.js",
+  "scripts":{
+    "start":"node app.js"
+  }
   "author": {
     "name": "HP PC",
-    "email": ""
+    "email": "hrana564@gmail.com"
   },
   "dependencies": {
     "bluebird": "^3.4.7",
@@ -20,5 +23,14 @@
     "morgan": "~1.3.0",
     "serve-favicon": "~2.1.3",
     "stylus": "*"
-  }
+  },
+"engines":{
+  "node": "4.1.1"
+  },
+"repository": {
+    "type": "git",
+    "url": "https://github.com/hrana564/Tracker2017"
+  },
+  "licence":"MIT"
+
 }
