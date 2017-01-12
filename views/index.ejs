@@ -1,0 +1,46 @@
+﻿<html>
+<head>
+    <title>
+        2017 Himanshu's Tracker
+    </title>
+    <link href="./stylesheets/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <h1 style="text-align:center">Welcome to 2017 Tracker</h1>
+    </div>
+    <hr />
+    <%if(MessageCode==1){%>
+        <div class = "alert alert-success">Success! Well done its updated for today.</div>
+    <%}%>
+    <%if(MessageCode==-1){%>
+        <div class = "alert alert-danger">Some internal error occoured! Please try again later.</div>
+    <%}%>
+    <%if (locals.PendingActivities) {%>
+    <%if (PendingActivities.length == 0) { %>
+
+        <!--if all activities for today are completed-->
+        <div class="alert alert-warning">
+            No Activities are configured in system!!! Please contact your system admin for the same.
+        </div>
+
+    <% } else { %>
+    <!--activities for today-->
+    <div>
+        <form action="/" method="post">
+            <% for(var i=0; i<PendingActivities.length; i++) { %>
+                <br />
+                <%= PendingActivities[i].ActivityName %>
+                <% if(PendingActivities[i].IsDone) {%>
+                <input type="radio" checked id=="<%= PendingActivities[i].ActivitySelectorName  %>" name="<%= PendingActivities[i].ActivitySelectorName %>" value="yes"> Yes <input type="radio" id=="<%= PendingActivities[i].ActivitySelectorName %>" name="<%= PendingActivities[i].ActivitySelectorName %>" value="no"> No
+                <% } else {%>
+                <input type="radio" id=="<%= PendingActivities[i].ActivitySelectorName %>" name="<%= PendingActivities[i].ActivitySelectorName %>" value="yes"> Yes <input type="radio" checked id=="<%= PendingActivities[i].ActivitySelectorName %>" name="<%= PendingActivities[i].ActivitySelectorName %>" value="no"> No
+                <%}%>
+            <%}%>
+            <br/><input type="submit" value="update">
+        </form>
+        <% } %>
+    </div>
+    <%}%>
+</body>
+</html>
