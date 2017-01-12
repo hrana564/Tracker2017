@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts":{
     "start":"node app.js"
-  }
+  },
   "author": {
     "name": "HP PC",
     "email": "hrana564@gmail.com"
